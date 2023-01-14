@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./scss/main.scss";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { AppHeader } from "./cmps/AppHeader";
+import { MyPortfolio } from "./views/MyPortfolio";
+import { About } from "./views/About";
+import { Contact } from "./views/ContactMe";
+import { MyProjects } from "./views/MyProjects";
+import { AppFooter } from "./cmps/AppFooter";
+import { ProjectDetails } from "./views/ProjectDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="main-app">
+        <AppHeader></AppHeader>
+        <main className="main-container">
+        <Routes>
+          <Route exact path="/" element={<MyPortfolio />}/>
+          <Route exact path="/about" element={<About />}/>
+          <Route exact path="/contact" element={<Contact />}/>
+          <Route exact path="/my-projects" element={<MyProjects />}/>
+          <Route exact path="/project/:id" element={<ProjectDetails />}/>
+        </Routes>
+        </main>
+        <AppFooter></AppFooter>
+      </div>
+    </Router>
   );
 }
 

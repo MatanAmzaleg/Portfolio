@@ -1,0 +1,162 @@
+.info{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .info-section{
+        width: 80%;
+        text-align: left;
+
+        .main-title{
+            text-align: left;
+            font-weight: 200;
+            font-size: 3rem;
+
+            .title-span{
+                font-weight: bold;
+            }
+        }
+        .info-p{
+            font-size: 13.5px;
+            color: rgb(123, 123, 123);
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
+        .rounded-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            background-color:#FE5A02 ;
+            text-decoration: none;
+            margin-bottom: 80px;
+
+            &:hover{
+                color: white;
+                background-color: #eb5403 ;
+            }
+        }
+        .languages-section{
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            .language{
+                font-size: 22px;
+                padding-inline: 15px;
+                padding-block: 5px;
+                border-radius: 5px;
+                font-weight: bold;
+                cursor:default;
+                transition: 0.3s;
+
+            }
+
+            .java-script{
+                background-color: #FE8E3E;
+                
+                &:hover{
+                    color: white;
+                }
+            }
+
+            .mongo-db{
+                background-color: #eb5403 ;
+                color: white;
+
+                &:hover{
+                    color: black;
+                }
+            }
+
+            .node-js{
+                background-color: #D7D7D7;
+                color: black;
+
+                &:hover{
+                    color: white;
+                }
+            }
+
+            .vue{
+                background-color: rgb(12, 12, 12);
+                color: white;
+
+                &:hover{
+                    color: #eb5403;
+                }
+            }
+
+            .react{
+                background-color: #D7D7D7;
+
+                &:hover{
+                    color: white;
+                }
+            }
+
+            .angular{
+                background-color: #eb5403;
+                color: black;
+
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .img-section{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block: 30px;
+        .main-img{
+            width: 80%;
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+@media (min-width:1000px){
+    .info{
+        flex-direction: row;
+
+        .info-section{
+            width: 45%;
+        }
+        
+        .img-section{
+            width: 55%;
+            height: 500px;
+            justify-content: flex-end !important;
+            margin-block: 0;
+        }
+        
+        .main-title{
+            font-size: 4rem !important;
+        }
+    }
+    }
+
+
+@media (min-width:1500px){
+  
+    .info{
+
+        
+        .img-section{
+        height: 617px;
+    }
+    
+    .main-title{
+        font-size: 7rem !important;
+    }
+}
+}

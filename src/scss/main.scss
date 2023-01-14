@@ -1,0 +1,82 @@
+//CMPS
+@import './cmps/app-header.scss';
+@import './cmps/app-footer.scss';
+@import './cmps/my-info.scss';
+@import './cmps/latest-projects.scss';
+
+//HELPERS
+@import './typography.scss';
+@import './helpers.scss';
+
+//VIEWS 
+@import './views/my-portfolio.scss';
+@import './views/project-details.scss';
+@import './views/my-projects.scss';
+
+
+
+
+
+
+
+
+
+.main-app{
+    display: grid;
+    grid-template-columns: minmax(10px, 15%) 1fr minmax(10px, 15%);
+}
+
+*{
+    font-family: Rouben;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.rounded-btn{
+    border-radius: 30px;
+    height: 50px;
+    width: 190px;
+    background-color: rgb(215, 215, 215);
+    font-weight: bolder;
+
+    transition:  0.3s;
+
+    &:hover{
+        width: 170px;
+        background-color:  rgb(202, 202, 202);
+
+    }
+}
+
+.main-container{
+    grid-column: 2;
+}
+
+.nav-link{
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: black;
+    height: 10vh;
+    // line-height: 10vh;
+    width: 90px;
+
+    &:hover{
+        font-weight: bolder;
+        border-bottom: 3px solid #FE5A02;
+        margin-bottom: -3px;
+    }
+
+    &.active{
+        font-weight: bolder;
+        border-bottom: 6px solid #FE5A02;
+        margin-bottom: -6px;
+    }
+}

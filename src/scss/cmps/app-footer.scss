@@ -1,0 +1,23 @@
+.app-footer{
+    flex-direction: column;
+    margin-top: 80px;
+    border-top: 15px solid #EB5403;
+    justify-content: center;
+    align-items: center;
+    grid-column:2;
+    height: 10vh;
+    padding-bottom: 15px;
+
+    .a-section{
+
+        a{
+            color: black;
+            margin: 6px;
+            font-size:22px;
+        }
+    }
+
+    p{
+        font-size: 12px;
+    }
+}

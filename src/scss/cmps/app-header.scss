@@ -1,0 +1,14 @@
+header{
+    height: 10vh;
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav{
+      display: flex;
+      >*{
+        margin-inline-end: 20px;
+      }  
+    }
+}
