@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 // import './assets/typography/Rouben/Rouben.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

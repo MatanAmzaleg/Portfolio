@@ -1,8 +1,12 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { NavLink, useNavigate  } from "react-router-dom";
-import App from "../App";
-import AppsusImg from "../assets/imgs/projects/Appsus/1.jpg"
+
 
 export const LatestProjects = ({ top3 }) => {
+  useEffect(()=> {
+    Aos.init({duration:20000})
+  },[])
   
   const history = useNavigate();
 
@@ -26,7 +30,7 @@ export const LatestProjects = ({ top3 }) => {
       <section className="projects-section flex">
         {top3.map((prj, idx) => {
           return (
-            <div onClick={()=> onNavigate(prj.id)} key={prj.id} style={{marginTop: `${idx * 60}px`}} className="project flex">
+            <div data-aos="fade-right" data-aos-duration="1000" onClick={()=> onNavigate(prj.id)} key={prj.id} style={{marginTop: `${idx * 60}px`}} className="project flex">
               <div className="square" style={{backgroundImage: `url(${require(`../assets/imgs/projects/${prj.title}/1.jpg`)})`}}>
                 <div className="black-square">{idx +1}</div>
               </div>

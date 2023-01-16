@@ -26,6 +26,7 @@
             margin-bottom: 40px;
         }
         .rounded-btn{
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,6 +34,7 @@
             background-color:#FE5A02 ;
             text-decoration: none;
             margin-bottom: 80px;
+            box-shadow: 10px 10px 13px -9px rgba(55, 55, 55, 0.75);
 
             &:hover{
                 color: white;
@@ -40,12 +42,12 @@
             }
         }
         .languages-section{
-            width: 100%;
+            width: 80%;
             flex-wrap: wrap;
             gap: 15px;
 
             .language{
-                font-size: 22px;
+                font-size: 14px;
                 padding-inline: 15px;
                 padding-block: 5px;
                 border-radius: 5px;
@@ -111,15 +113,43 @@
 
     .img-section{
         width: 80%;
+        max-width:400px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-block: 30px;
+        margin-bottom: 50px;
         .main-img{
             width: 80%;
             border-radius: 50%;
             object-fit: cover;
             aspect-ratio: 1/1;
+        }
+    }
+}
+
+@media (min-width:600px){
+    .info{
+        .img-section{
+            max-width: none;
+        }
+
+        .info-section{
+            
+            .rounded-btn{
+                width: 170px ;
+                height: 50px;
+
+                &:hover{
+                    width: 190px;
+                }
+                
+            } 
+            .languages-section{
+                
+                .language{
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
@@ -130,6 +160,18 @@
 
         .info-section{
             width: 45%;
+
+            .languages-section{
+                width: 100%;
+                .language{
+                    font-size: 22px;
+    
+                }
+            }
+            .rounded-btn{
+                width: 170px;
+                height: 50px;
+            }    
         }
         
         .img-section{
@@ -149,11 +191,6 @@
 @media (min-width:1500px){
   
     .info{
-
-        
-        .img-section{
-        height: 617px;
-    }
     
     .main-title{
         font-size: 7rem !important;

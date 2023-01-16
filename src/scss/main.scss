@@ -3,6 +3,7 @@
 @import './cmps/app-footer.scss';
 @import './cmps/my-info.scss';
 @import './cmps/latest-projects.scss';
+@import './cmps/hamburger.scss';
 
 //HELPERS
 @import './typography.scss';
@@ -12,6 +13,8 @@
 @import './views/my-portfolio.scss';
 @import './views/project-details.scss';
 @import './views/my-projects.scss';
+@import './views/contact-me.scss';
+@import './views/about.scss';
 
 
 
@@ -23,7 +26,7 @@
 
 .main-app{
     display: grid;
-    grid-template-columns: minmax(10px, 15%) 1fr minmax(10px, 15%);
+    grid-template-columns: (30px) 1fr (30px);
 }
 
 *{
@@ -40,23 +43,25 @@ button{
 }
 
 .rounded-btn{
+    color: black;
     border-radius: 30px;
-    height: 50px;
-    width: 190px;
+    height: 40px;
+    width: 120px;
     background-color: rgb(215, 215, 215);
     font-weight: bolder;
+    font-size: 14px;
 
     transition:  0.3s;
 
     &:hover{
-        width: 170px;
-        background-color:  rgb(202, 202, 202);
+        width: 150px;
 
     }
 }
 
 .main-container{
     grid-column: 2;
+    min-height: 67vh;
 }
 
 .nav-link{
@@ -65,8 +70,7 @@ button{
     text-decoration: none;
     color: black;
     height: 10vh;
-    // line-height: 10vh;
-    width: 90px;
+
 
     &:hover{
         font-weight: bolder;
@@ -78,5 +82,13 @@ button{
         font-weight: bolder;
         border-bottom: 6px solid #FE5A02;
         margin-bottom: -6px;
+    }
+}
+
+
+@media(min-width:1000px){
+    .main-app{
+        display: grid;
+        grid-template-columns: 15% 1fr 15%;
     }
 }

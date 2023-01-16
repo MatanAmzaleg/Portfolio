@@ -1,0 +1,25 @@
+.hamburger-section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    width: 300px;
+    margin-top: 10vh;
+    transform: translateX(-200%);
+    border-inline-end:  1px solid rgb(201, 201, 201);
+    border-top:  1px solid rgb(201, 201, 201);
+
+
+    transition: transform 0.6s;
+
+    >*{
+        width: 100%;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        margin-bottom: -1px;
+    }
+}
+
+.open{
+    transform: translateX(0);
+}

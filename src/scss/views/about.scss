@@ -1,0 +1,50 @@
+.about-me{
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    .main-title{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .info-sec{
+        display: grid;
+        place-items: center;
+        text-align: left;
+        font-size: 12px;
+        max-width: 900px;
+        >*:not(:last-child){
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+
+
+        .rounded-btn{
+            margin-top: 20px;
+            background-color: #FE5A02;
+            color: black;
+            text-decoration: none;
+            display: grid;
+            place-content: center;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
+
+
+@media(min-width:1000px){
+    .about-me{
+        .main-title{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        .info-sec{
+            font-size: 15px;
+        }
+    }
+}

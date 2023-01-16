@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { projectService } from "../services/project-service";
+import Aos from "aos";
 
 export const MyProjects = () => {
+  useEffect(()=> {
+    Aos.init({duration:20000})
+  },[])
+
   const history = useNavigate();
 
   const onNavigate = (id) => {
@@ -20,10 +25,10 @@ export const MyProjects = () => {
   return projects ? (
     <section className="my-projects">
       <h1 className="main-title">My projects</h1>
-      <section className="all-projects flex">
+      <section data-aos="fade-down" data-aos-duration="1000" className="all-projects flex">
         {projects.map((prj, idx) => {
           return (
-            <div
+            <div 
               onClick={() => onNavigate(prj.id)}
               key={prj.id}
               className="project flex"

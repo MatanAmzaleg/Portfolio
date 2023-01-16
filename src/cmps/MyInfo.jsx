@@ -1,8 +1,14 @@
 import { NavLink } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 export const MyInfo = () => {
+  useEffect(()=> {
+    Aos.init({duration:20000})
+  },[])
   return (
-    <section className="info">
+    <section className="info" data-aos="fade-down" data-aos-duration="1000">
       <div className="info-section ">
         <h1 className="main-title">
           My name is <span className="title-span">Matan</span>
