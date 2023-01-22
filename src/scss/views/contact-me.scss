@@ -1,109 +1,119 @@
-.contact{
-    margin-top: 30px;
+.contact {
+  margin-top: 30px;
 
-    h1{
-        text-align: center;
-        font-size: 1.7rem;
-        font-weight: bolder;
-    }
+  h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
 
-    .form-section{      
-        align-items: center; 
-        margin-top: 50px;
-        // background-color: #fe5a02a1;
-        .details-sec{
-            width: 100%;
-            min-width: 250px;
-            text-align: center;
-            align-items: center;
+  .form-section {
+    align-items: center;
+    margin-top: 50px;
+    // background-color: #fe5a02a1;
+    .details-sec {
+      width: 100%;
+      min-width: 250px;
+      text-align: center;
+      align-items: center;
 
-            .name-sec{
-                justify-content: space-between;
-                gap: 10px;
-                width: 50%;
-                min-width: 250px;
-                >*{
-                    margin-block: 10px;
-                }
-                .f-name-input, .l-name-input{
-                    width: 48%;
-                    min-width: 110px
-                }
-
-                
-            }
-
-            .email-sec{
-                width: 100%;
-                margin-bottom: 10px;
-                .email-input{
-                    width: 50%;
-                    min-width: 250px;
-                }
-            }
-            .phone-sec{
-                width: 100%;
-                margin-bottom: 10px;
-                .phone-input{
-                    width: 50%;
-                    min-width: 250px;
-                }
-            }
-            .message-sec{
-                margin-top: 10px;
-                width: 100%;
-                margin-bottom: 10px;
-                .message-input{
-                    margin-top: 10px;
-                    width: 50%;
-                    resize: none;
-                    padding: 10px;
-                    min-width: 250px;
-                    border: 1px solid rgb(186, 186, 186);
-                    border-radius: 2px;
-
-                    &:focus-visible{
-                        // outline-offset: 0px;
-                        outline: #EB5403 2px solid;
-                        border-radius: 2px;
-                        border: none;
-                        margin-bottom: 2px;
-                    }
-                }
-            }
+      .name-sec {
+        justify-content: space-between;
+        gap: 10px;
+        width: 50%;
+        min-width: 250px;
+        > * {
+          margin-block: 10px;
         }
-    .rounded-btn{
-        margin-top: 20px;
-        background-color: #EB5403;
-        border: none;
-        cursor: pointer;
-        &:hover{
-            color: white;
+        .f-name-input,
+        .l-name-input {
+          width: 48%;
+          min-width: 110px;
         }
+      }
+
+      .email-sec {
+        width: 100%;
+        margin-bottom: 10px;
+        .email-input {
+          width: 50%;
+          min-width: 250px;
+        }
+      }
+      .phone-sec {
+        width: 100%;
+        margin-bottom: 10px;
+        .phone-input {
+          width: 50%;
+          min-width: 250px;
+        }
+      }
+      .message-sec {
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        .message-input {
+          margin-top: 10px;
+          width: 50%;
+          resize: none;
+          padding: 10px;
+          min-width: 250px;
+          border: 1px solid rgb(186, 186, 186);
+          border-radius: 2px;
+
+          &:focus-visible {
+            // outline-offset: 0px;
+            outline: #eb5403 2px solid;
+            border-radius: 2px;
+            border: none;
+            margin-bottom: 2px;
+          }
+        }
+      }
+      .buttons {
+        >*{
+            margin:5px
+        }
+        .whatsapp-btn {
+          color: #25d366;
+          font-size: 28px;
+        }
+
+        .email-btn{
+            color: rgb(107, 107, 107);
+            font-size: 28px;
+        }
+      }
     }
+    .rounded-btn {
+      margin-top: 20px;
+      background-color: #eb5403;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
     }
+  }
 }
 
-@media(min-width:800px){
-    .contact{
-        h1{
-            
-            font-size: 2rem;
-        }
-
-     
+@media (min-width: 800px) {
+  .contact {
+    h1 {
+      font-size: 2rem;
     }
+  }
 }
-@media(min-width:1200px){
-    .contact{
-        h1{
-            font-size: 3rem;
-        }
-
-        .form-section{
-            .rounded-btn{
-                margin-top: 30px;
-            }
-        }
+@media (min-width: 1200px) {
+  .contact {
+    h1 {
+      font-size: 3rem;
     }
+
+    .form-section {
+      .rounded-btn {
+        margin-top: 30px;
+      }
+    }
+  }
 }
