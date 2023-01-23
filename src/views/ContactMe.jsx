@@ -4,6 +4,8 @@ import Aos from "aos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import emailjs from '@emailjs/browser';
+import swal from 'sweetalert';
 
 export const Contact = () => {
   useEffect(() => {
@@ -27,7 +29,7 @@ export const Contact = () => {
       !phoneRef.current.value ||
       !messageRef.current.value
     ) {
-      alert("Please fill in all fields!");
+      swal("Please fill in all fields!","", "error");
       return;
     }
 
@@ -35,7 +37,8 @@ export const Contact = () => {
     const phoneRegex =
       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     if (!phoneRegex.test(phoneRef.current.value)) {
-      alert("Please enter a valid phone number!");
+      swal("Please enter a valid phone number!","", "error");
+  
       return;
     }
 
@@ -43,20 +46,27 @@ export const Contact = () => {
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!emailRegex.test(emailRef.current.value)) {
-      alert("Please enter a valid email address!");
+      swal("Please enter a valid email address!","", "error");
       return;
     }
 
-    const message = {
-      firstName: fnameRef.current.value,
-      lastName: lnameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value,
-      text: messageRef.current.value,
-    };
-    console.log(message);
+    // const message = {
+    //   firstName: fnameRef.current.value,
+    //   lastName: lnameRef.current.value,
+    //   email: emailRef.current.value,
+    //   phone: phoneRef.current.value,
+    //   text: messageRef.current.value,
+    // };
+    // console.log(message);
 
-    // Do something with the message object
+    emailjs.sendForm('service_i9y75an', 'template_g9r2ycv', formRef.current, 'FOcKwoYz5oedzVUbQ')
+    .then((result) => {
+        console.log(result.text);
+        console.log("email sent successfully");
+        swal("Thanks for contacting me!", "", "success");
+    }, (error) => {
+        console.log(error.text);
+    });
 
     formRef.current.reset();
   };
@@ -126,7 +136,7 @@ export const Contact = () => {
               ref={messageRef}
             ></textarea>
           </div>
-          <input value="Submit" type="submit" className="rounded-btn" />
+          <input value="Send" type="submit" className="rounded-btn" />
           <p>or</p>
           <div className="buttons flex">
             <a

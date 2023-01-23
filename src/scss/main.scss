@@ -21,7 +21,14 @@
 
 
 
+.swal-button{
+    background-color: #FE5A02;
+    transition: background-color 0.3s;
 
+    &:hover{
+        background-color: #d74e04 !important;
+    }
+}
 
 
 .main-app{
