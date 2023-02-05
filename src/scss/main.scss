@@ -25,6 +25,37 @@
   }
 }
 
+.small-h{
+  height: 3vh;
+  width: 3vh;
+}
+
+.mid-h{
+  width: 10vh;
+  height: 5vh;
+}
+
+.circle{
+  border-radius: 50%;
+  background-color:#fe5a02;
+  box-shadow: 0px 0px 39px -11px rgba(215,78,4,0.75);
+  position: absolute;
+  top:50px;
+  right: 0;
+}
+
+.half-circle {
+  background-color:#fe5a02;
+  border-top-left-radius: 110px; 
+  border-top-right-radius: 110px;
+  rotate: 90deg;
+  border-bottom: 0;
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  transform: translateY(50%);
+  box-shadow: 0px 0px 39px -11px rgba(215,78,4,0.75);
+}
 .main-app {
   display: grid;
   grid-template-columns: (30px) 1fr (30px);

@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 export const About = () => {
   return (
     <section className="about">
-      <section className="about-me">
+      <section className="about-me relative">
         <h1 className="main-title">About me</h1>
         <section className="info-sec flex column">
           <article className="first-paragrap flex align-center">
@@ -32,7 +32,7 @@ export const About = () => {
               alt=""
             />
           </article>
-          <article className="second-paragraph flex align-center column">
+          <article className="second-paragraph flex align-center column relative">
             <div className="details">
               <h1 className="parag-title">08.2018-03.2021 - IDF "Magal"</h1>
               <p> Filling variuos commanding positions such as:</p>
