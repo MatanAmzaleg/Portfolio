@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Carousel } from "react-responsive-carousel";
 // import { faForm } from "@fortawesome/free-regular-svg-icons";
 
 export const About = () => {
@@ -16,11 +17,13 @@ export const About = () => {
               </h1>
               <p>
                 I'm proud to say I graduated from Makif Vav High School with a
-                full high school diploma and an <span className="bolder">outstanding average</span> of <span className="orange">102.</span> My
-                time in the highly-regarded "Excellent" class enabled me to
-                immerse myself in the subjects of Computer Science (10 units)
-                and Physics (5 units), further enhancing my knowledge and skills
-                in these areas.
+                full high school diploma and an{" "}
+                <span className="bolder">outstanding average</span> of{" "}
+                <span className="orange">102.</span> My time in the
+                highly-regarded "Excellent" class enabled me to immerse myself
+                in the subjects of Computer Science (10 units) and Physics (5
+                units), further enhancing my knowledge and skills in these
+                areas.
               </p>
             </div>
             <img
@@ -68,9 +71,9 @@ export const About = () => {
                 <div>
                   <p>
                     This was a very meaningful experience for me. Under my
-                    command passed hundreds of soldiers, and dozens of commanders from different
-                    backgrounds and i got the opportunity to touch and design
-                    each and every one of them.
+                    command passed hundreds of soldiers, and dozens of
+                    commanders from different backgrounds and i got the
+                    opportunity to touch and design each and every one of them.
                   </p>
                 </div>
               </div>
@@ -95,35 +98,41 @@ export const About = () => {
           </article>
           <article className="third-paragraph flex align-center">
             <div className="details">
-              <h1 className="parag-title">05.2021-03.2022 - C.a.l Salesperson</h1>
+              <h1 className="parag-title">
+                05.2021-03.2022 - C.a.l Salesperson
+              </h1>
               <p>
                 After I was released from the army, I decided to start a new
                 chapter in my life and began working at C.a.l as a salesperson.
                 I was determined to make a difference in the company and quickly
                 established myself as a top performer. In December of 2021, I
-                was honored to be named the <span className="orange">"Excellent Employee"</span> for my hard
+                was honored to be named the{" "}
+                <span className="orange">"Excellent Employee"</span> for my hard
                 work and dedication to both meeting my sales goals and
                 prioritizing the needs of my customers. My time at C.a.l was
                 full of challenges and changes, but I always remained adaptable
-                and committed to excellence. I was
-                consistently recognized for my achievements, winning several
-                team and center competitions. I am proud to have been a part of
-                such a dynamic and successful organization, and I am grateful
-                for the opportunities that my time there provided me.
+                and committed to excellence. I was consistently recognized for
+                my achievements, winning several team and center competitions. I
+                am proud to have been a part of such a dynamic and successful
+                organization, and I am grateful for the opportunities that my
+                time there provided me.
               </p>
             </div>
           </article>
           <article className="fourth-paragraph">
-            <h1 className="parag-title">03.2022-08.2022 - Trip to South America</h1>
+            <h1 className="parag-title">
+              03.2022-08.2022 - Trip to South America
+            </h1>
             <p>
-              After i resigned C.a.l I started my trip to South America with my partner Adi.
-              We traveled for five months visiting Argentina, Brasil, the Amazonas, Peru, Colombia, Mexico & Belize.
-              This trip was an incredible experience and allowed me to immerse myself in
-              different cultures and learn more about the world.
-              It also expanded my perspective and made me more open-minded to different
+              After i resigned C.a.l I started my trip to South America with my
+              partner Adi. We traveled for five months visiting Argentina,
+              Brasil, the Amazonas, Peru, Colombia, Mexico & Belize. This trip
+              was an incredible experience and allowed me to immerse myself in
+              different cultures and learn more about the world. It also
+              expanded my perspective and made me more open-minded to different
               ways of thinking.
             </p>
-            <div className="images flex ">
+            <div className="south-america images flex ">
               <img
                 className="argentina-img"
                 src={require("../assets/imgs/about/argentina.jpg")}
@@ -139,11 +148,11 @@ export const About = () => {
                 src={require("../assets/imgs/about/peru.jpg")}
                 alt=""
               />
-                <img
-                  className="amazonas-img"
-                  src={require("../assets/imgs/about/amazonas.jpg")}
-                  alt=""
-                />
+              <img
+                className="amazonas-img"
+                src={require("../assets/imgs/about/amazonas.jpg")}
+                alt=""
+              />
               <img
                 className="colombia-img"
                 src={require("../assets/imgs/about/colombia.jpg")}
@@ -165,20 +174,72 @@ export const About = () => {
                 alt=""
               />
             </div>
+            <Carousel className="carousel" width="40%">
+              <div>
+                <img
+                  src={require("../assets/imgs/about/argentina.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/brasil.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/peru.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/amazonas.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/colombia.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/belize.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/peru2.jpg")}
+                />
+              </div>
+              <div>
+                <img
+                  src={require("../assets/imgs/about/mexico.jpg")}
+                />
+              </div>
+            </Carousel>
           </article>
           <article className="third-paragraph flex align-center">
             <div className="details">
-              <h1 className="parag-title">08.2022-01.2023 - Coding Academy intensive bootcamp</h1>
+              <h1 className="parag-title">
+                08.2022-01.2023 - Coding Academy intensive bootcamp
+              </h1>
               <p>
-                When i returned home from my trip i signed for the Coding Academy bootcamp. 
-                 The intensive program provided me with the necessary tools and knowledge to succeed in the tech industry. The course required a lot of time and dedication, including sacrificing some weekends to study, but it was all worth it. I learned a variety of technologies including Vue.js, Vuex, MongoDB, SQL, Angular, React, Rest API, and Socket Io. These skills have given me a strong foundation to continue growing in my career as a fullstack developer.
+                When i returned home from my trip i signed for the Coding
+                Academy bootcamp. The intensive program provided me with the
+                necessary tools and knowledge to succeed in the tech industry.
+                The course required a lot of time and dedication, including
+                sacrificing some weekends to study, but it was all worth it. I
+                learned a variety of technologies including Vue.js, Vuex,
+                MongoDB, SQL, Angular, React, Rest API, and Socket Io. These
+                skills have given me a strong foundation to continue growing in
+                my career as a fullstack developer.
               </p>
             </div>
           </article>
           <article className="fifth-paragraph">
             <p className="bolder center">
-              So, if you're looking for a driven and skilled Full-Stack developer,
-              with high self-discipline, who strives for excellence, good vibes and has a high work ethic. <br />
+              So, if you're looking for a driven and skilled Full-Stack
+              developer, with high self-discipline, who strives for excellence,
+              good vibes and has a high work ethic. <br />
               I'd love if you could leave me a message right here below😄
             </p>
           </article>

@@ -27,14 +27,16 @@
         margin-top: 10px;
       }
     }
-
+    .first-paragrap {
+      flex-direction: column;
+    }
     .graduate-img {
       height: 200px;
       box-shadow: 17px 16px 29px -17px rgba(61, 61, 61, 0.75);
       border-radius: 15px;
       transition: scale 0.3s, rotate 0.3s;
 
-      &:hover{
+      &:hover {
         scale: 1.2;
         rotate: 3deg;
       }
@@ -57,11 +59,11 @@
         }
       }
       img {
-        height: 150px;
+        height: 100px;
         box-shadow: 17px 16px 29px -17px rgba(61, 61, 61, 0.75);
         border-radius: 15px;
         transition: scale 0.3s;
-        &:hover{
+        &:hover {
           scale: 1.3;
         }
       }
@@ -79,21 +81,47 @@
       }
     }
 
-    .parag-title{
-      margin-bottom:8px;
+    .parag-title {
+      margin-bottom: 8px;
     }
 
-    .images{
+    .carousel {
+      margin-top: 30px;
+      display: grid;
+      place-items: center;
+
+      li.thumb {
+        width: 50px !important;
+      }
+    }
+
+    .images.south-america {
+      display: none;
       margin-top: 30px;
       justify-content: space-between;
       height: 150px;
-      img{
+      img {
         height: 150px;
         box-shadow: 17px 16px 29px -17px rgba(61, 61, 61, 0.75);
         border-radius: 15px;
         transition: scale 0.3s;
-        &:hover{
+        &:hover {
           scale: 1.3;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .about-me {
+    .info-sec {
+      .first-paragrap {
+        flex-direction: row;
+      }
+      .images {
+        img {
+          height: 150px;
         }
       }
     }
@@ -102,6 +130,18 @@
 
 @media (min-width: 1000px) {
   .about-me {
+    .info-sec {
+      .carousel {
+
+        li.thumb {
+          width: 70px !important;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1300px) {
+  .about-me {
     .main-title {
       text-align: center;
       font-size: 3rem;
@@ -109,6 +149,12 @@
     }
     .info-sec {
       font-size: 15px;
+      .carousel {
+        display: none;
+      }
+      .images.south-america {
+        display: flex;
+      }
     }
   }
 }
