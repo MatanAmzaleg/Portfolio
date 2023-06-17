@@ -30,10 +30,16 @@
     text-decoration: none;
     color: black;
     background-color:#FE5A02 ;
+    margin-bottom: 50px;
 
     &:hover{
         color: white;
         background-color:#FE5A02;
     }
+  }
+
+  .pagination{
+    width: 70%;
+
   }
 }
